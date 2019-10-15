@@ -79,14 +79,14 @@
       <h2 class="text-center">Mars Hemispheres</h2>
     </div>
 
-    {% for hemisphere in hemisphere_image_urls %}
+    {% for hemisphere in nasa_scraped_data.hemisphere_image_urls %}
       <div class="col-md-6">
           <div class="thumbnail">
 
           <!-- if images is False/None/non-existent, then default to error message -->
-          <img src="{{nasa_scraped_data.hemisphere_image_urls['img_url']}}" alt="...">
+          <img src="{{hemisphere.img_url}}" width="85%" height="85%">
           <div class="caption">
-              <h3>{{nasa_scraped_data.hemisphere_image_urls['title']}}</h3>
+              <h4>{{hemisphere.title}}</h4>
           </div>
           </div>
       </div>
